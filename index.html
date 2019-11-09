@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>off_net</title>
+    <style>
+        body {
+            background-color: rgb(250, 250, 45);
+        }
+
+        .centered {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -100px;
+        }
+
+        .square-box {
+            width: 200px;
+            overflow: hidden;
+            border-radius: 1px;
+            border-style: solid;
+            border-color: blue;
+        }
+
+        .square-box::before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+
+        .square-content {
+            position: absolute;
+            top: 40%;
+            left: 0;
+            bottom: 50%;
+            right: 0;
+            text-align: center;
+        }
+
+        .anim {
+            overflow: hidden;
+            border-right: .15em solid black;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: 0em;
+            animation:
+                blink-caret .75s step-end infinite;
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent
+            }
+
+            50% {
+                border-color: black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="square-box centered">
+        <div class="square-content">
+            <h3>off<span class="anim">_net</span>
+            </h3>
+        </div>
+    </div>
+</body>
+
+</html>
